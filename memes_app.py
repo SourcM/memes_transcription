@@ -8,9 +8,11 @@ from PIL import Image, ImageOps
 
  
 @st.cache(allow_output_mutation=True)
-
-# with st.spinner('Model is being loaded..'):
-reader = easyocr.Reader(['en'])
+def load_model():
+    model=easyocr.Reader(['en'])
+    return model
+with st.spinner('Model is being loaded..'):
+    reader =load_model()
  
 st.write("""
          # Memes Understanding
