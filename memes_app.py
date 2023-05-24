@@ -30,7 +30,7 @@ else:
     st.image(image, use_column_width=True)
     image = np.asarray(image)
     image = image[:,:,::-1]
-    result = reader.readtext(img)
+    result = reader.readtext(image)
     for detection in result: 
         text = detection[1]
         st.write(text)
