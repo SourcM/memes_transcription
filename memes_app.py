@@ -10,7 +10,7 @@ from PIL import Image, ImageOps
 @st.cache(allow_output_mutation=True)
 
 with st.spinner('Model is being loaded..'):
-  reader = easyocr.Reader(['en'])
+    reader = easyocr.Reader(['en'])
  
 st.write("""
          # Memes Understanding
