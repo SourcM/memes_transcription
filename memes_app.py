@@ -32,5 +32,5 @@ else:
     image = image[:,:,::-1]
     result = reader.readtext(image)
     for detection in result: 
-        text = detection[1]
-        st.write(text)
+        tt_string = detection[1]
+        st.text(tt_string)
