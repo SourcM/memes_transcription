@@ -12,7 +12,7 @@ def load_model():
     model=easyocr.Reader(['en'])
     return model
 with st.spinner('Model is being loaded..'):
-    reader =load_model()
+    model =load_model()
  
 st.write("""
          # Memes Understanding
@@ -30,7 +30,7 @@ else:
     st.image(image, use_column_width=True)
     image = np.asarray(image)
     image = image[:,:,::-1]
-    result = reader.readtext(image)
+    result = model.readtext(image)
     for detection in result: 
         tt_string = detection[1]
         st.text(tt_string)
